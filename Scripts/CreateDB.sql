@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 10.6.171.65
--- Generation Time: Jul 18, 2016 at 01:41 PM
+-- Generation Time: Jul 18, 2016 at 02:00 PM
 -- Server version: 5.5.43
 -- PHP Version: 5.3.4
 
@@ -310,6 +310,7 @@ CREATE TABLE `team` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `season` int(11) NOT NULL,
+  `legacy` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=58 ;
 
@@ -317,60 +318,60 @@ CREATE TABLE `team` (
 -- Dumping data for table `team`
 --
 
-INSERT INTO `team` VALUES(1, 'Alien', 1);
-INSERT INTO `team` VALUES(2, 'Puck Hawgs', 1);
-INSERT INTO `team` VALUES(3, 'Irwins', 1);
-INSERT INTO `team` VALUES(4, 'Voodoo', 1);
-INSERT INTO `team` VALUES(5, 'Kryptonite', 1);
-INSERT INTO `team` VALUES(6, 'Red Alert', 1);
-INSERT INTO `team` VALUES(7, 'Other', 1);
-INSERT INTO `team` VALUES(8, 'Alien', 2);
-INSERT INTO `team` VALUES(9, 'Irwins', 2);
-INSERT INTO `team` VALUES(10, 'YDD Tattoo', 2);
-INSERT INTO `team` VALUES(11, 'Kryptonite', 2);
-INSERT INTO `team` VALUES(12, 'Funky Pickle', 2);
-INSERT INTO `team` VALUES(13, 'Puck Hawgs', 2);
-INSERT INTO `team` VALUES(14, 'Other', 2);
-INSERT INTO `team` VALUES(15, 'Alien', 3);
-INSERT INTO `team` VALUES(16, 'Red Alert', 3);
-INSERT INTO `team` VALUES(17, 'Irwins', 3);
-INSERT INTO `team` VALUES(18, 'Voodoo', 3);
-INSERT INTO `team` VALUES(19, 'Kryptonite', 3);
-INSERT INTO `team` VALUES(20, 'Puck Hawgs', 3);
-INSERT INTO `team` VALUES(21, 'Other', 3);
-INSERT INTO `team` VALUES(22, 'Alien', 4);
-INSERT INTO `team` VALUES(23, 'Red Alert', 4);
-INSERT INTO `team` VALUES(24, 'Puckheads', 4);
-INSERT INTO `team` VALUES(25, 'FoDMKB', 4);
-INSERT INTO `team` VALUES(26, 'Voodoo', 4);
-INSERT INTO `team` VALUES(27, 'Kryptonite', 4);
-INSERT INTO `team` VALUES(28, 'Rink Rats', 4);
-INSERT INTO `team` VALUES(29, 'Victors', 4);
-INSERT INTO `team` VALUES(30, 'Other', 4);
-INSERT INTO `team` VALUES(31, 'Alien', 5);
-INSERT INTO `team` VALUES(32, 'Red Alert', 5);
-INSERT INTO `team` VALUES(33, 'Puckheads', 5);
-INSERT INTO `team` VALUES(34, 'FoDMKB', 5);
-INSERT INTO `team` VALUES(35, 'Voodoo', 5);
-INSERT INTO `team` VALUES(36, 'Kryptonite', 5);
-INSERT INTO `team` VALUES(37, 'Rink Rats', 5);
-INSERT INTO `team` VALUES(38, 'Victors', 5);
-INSERT INTO `team` VALUES(39, 'Other', 5);
-INSERT INTO `team` VALUES(40, 'Alien', 6);
-INSERT INTO `team` VALUES(41, 'Flying Moose', 6);
-INSERT INTO `team` VALUES(42, 'FoDMKB', 6);
-INSERT INTO `team` VALUES(43, 'Ichi', 6);
-INSERT INTO `team` VALUES(44, 'Kryptonite', 6);
-INSERT INTO `team` VALUES(45, 'Red Alert', 6);
-INSERT INTO `team` VALUES(46, 'Rink Rats', 6);
-INSERT INTO `team` VALUES(47, 'Victors', 6);
-INSERT INTO `team` VALUES(48, 'Other', 6);
-INSERT INTO `team` VALUES(49, 'Alien', 7);
-INSERT INTO `team` VALUES(50, 'Flying Moose', 7);
-INSERT INTO `team` VALUES(51, 'FoDMKB', 7);
-INSERT INTO `team` VALUES(52, 'Ichi', 7);
-INSERT INTO `team` VALUES(53, 'Kryptonite', 7);
-INSERT INTO `team` VALUES(54, 'Red Alert', 7);
-INSERT INTO `team` VALUES(55, 'Rink Rats', 7);
-INSERT INTO `team` VALUES(56, 'Victors', 7);
-INSERT INTO `team` VALUES(57, 'Other', 7);
+INSERT INTO `team` VALUES(1, 'Alien', 1, 1);
+INSERT INTO `team` VALUES(2, 'Puck Hawgs', 1, 2);
+INSERT INTO `team` VALUES(3, 'Irwins', 1, 3);
+INSERT INTO `team` VALUES(4, 'Voodoo', 1, 4);
+INSERT INTO `team` VALUES(5, 'Kryptonite', 1, 5);
+INSERT INTO `team` VALUES(6, 'Red Alert', 1, 6);
+INSERT INTO `team` VALUES(7, 'Other', 1, 0);
+INSERT INTO `team` VALUES(8, 'Alien', 2, 1);
+INSERT INTO `team` VALUES(9, 'Irwins', 2, 3);
+INSERT INTO `team` VALUES(10, 'YDD Tattoo', 2, 4);
+INSERT INTO `team` VALUES(11, 'Kryptonite', 2, 5);
+INSERT INTO `team` VALUES(12, 'Funky Pickle', 2, 6);
+INSERT INTO `team` VALUES(13, 'Puck Hawgs', 2, 2);
+INSERT INTO `team` VALUES(14, 'Other', 2, 0);
+INSERT INTO `team` VALUES(15, 'Alien', 3, 1);
+INSERT INTO `team` VALUES(16, 'Red Alert', 3, 6);
+INSERT INTO `team` VALUES(17, 'Irwins', 3, 3);
+INSERT INTO `team` VALUES(18, 'Voodoo', 3, 4);
+INSERT INTO `team` VALUES(19, 'Kryptonite', 3, 5);
+INSERT INTO `team` VALUES(20, 'Puck Hawgs', 3, 2);
+INSERT INTO `team` VALUES(21, 'Other', 3, 0);
+INSERT INTO `team` VALUES(22, 'Alien', 4, 1);
+INSERT INTO `team` VALUES(23, 'Red Alert', 4, 6);
+INSERT INTO `team` VALUES(24, 'Puckheads', 4, 7);
+INSERT INTO `team` VALUES(25, 'FoDMKB', 4, 3);
+INSERT INTO `team` VALUES(26, 'Voodoo', 4, 4);
+INSERT INTO `team` VALUES(27, 'Kryptonite', 4, 5);
+INSERT INTO `team` VALUES(28, 'Rink Rats', 4, 8);
+INSERT INTO `team` VALUES(29, 'Victors', 4, 2);
+INSERT INTO `team` VALUES(30, 'Other', 4, 0);
+INSERT INTO `team` VALUES(31, 'Alien', 5, 0);
+INSERT INTO `team` VALUES(32, 'Red Alert', 5, 0);
+INSERT INTO `team` VALUES(33, 'Puckheads', 5, 0);
+INSERT INTO `team` VALUES(34, 'FoDMKB', 5, 0);
+INSERT INTO `team` VALUES(35, 'Voodoo', 5, 0);
+INSERT INTO `team` VALUES(36, 'Kryptonite', 5, 0);
+INSERT INTO `team` VALUES(37, 'Rink Rats', 5, 0);
+INSERT INTO `team` VALUES(38, 'Victors', 5, 0);
+INSERT INTO `team` VALUES(39, 'Other', 5, 0);
+INSERT INTO `team` VALUES(40, 'Alien', 6, 0);
+INSERT INTO `team` VALUES(41, 'Flying Moose', 6, 0);
+INSERT INTO `team` VALUES(42, 'FoDMKB', 6, 0);
+INSERT INTO `team` VALUES(43, 'Ichi', 6, 0);
+INSERT INTO `team` VALUES(44, 'Kryptonite', 6, 0);
+INSERT INTO `team` VALUES(45, 'Red Alert', 6, 0);
+INSERT INTO `team` VALUES(46, 'Rink Rats', 6, 0);
+INSERT INTO `team` VALUES(47, 'Victors', 6, 0);
+INSERT INTO `team` VALUES(48, 'Other', 6, 0);
+INSERT INTO `team` VALUES(49, 'Alien', 7, 0);
+INSERT INTO `team` VALUES(50, 'Flying Moose', 7, 0);
+INSERT INTO `team` VALUES(51, 'FoDMKB', 7, 0);
+INSERT INTO `team` VALUES(52, 'Ichi', 7, 0);
+INSERT INTO `team` VALUES(53, 'Kryptonite', 7, 0);
+INSERT INTO `team` VALUES(54, 'Red Alert', 7, 0);
+INSERT INTO `team` VALUES(55, 'Rink Rats', 7, 0);
+INSERT INTO `team` VALUES(56, 'Victors', 7, 0);
+INSERT INTO `team` VALUES(57, 'Other', 7, 0);
