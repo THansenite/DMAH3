@@ -1,0 +1,12 @@
+***** Pulls back teams on schedule and scores (along with special) *****
+select sch.id, sch.when, t1.name as 'home', gm.h_score, t2.name as 'away', gm.a_score, gs.name
+from schedule sch
+join team t1
+  on sch.home = t1.id
+join team t2
+  on sch.away = t2.id
+left join game gm
+  on sch.id = gm.id
+left join game_special gs
+  on gm.special = gs.id
+where sch.id < 5
