@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 10.6.171.65
--- Generation Time: Jul 18, 2016 at 12:49 PM
+-- Generation Time: Jul 18, 2016 at 01:41 PM
 -- Server version: 5.5.43
 -- PHP Version: 5.3.4
 
@@ -12,6 +12,147 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `DMAH3dev`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `game`
+--
+
+CREATE TABLE `game` (
+  `id` int(11) NOT NULL,
+  `h_score` int(11) NOT NULL,
+  `a_score` int(11) NOT NULL,
+  `special` int(11) NOT NULL DEFAULT '1',
+  UNIQUE KEY `id` (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `game`
+--
+
+INSERT INTO `game` VALUES(1, 3, 7, 1);
+INSERT INTO `game` VALUES(2, 6, 3, 1);
+INSERT INTO `game` VALUES(3, 4, 6, 1);
+INSERT INTO `game` VALUES(4, 1, 11, 1);
+INSERT INTO `game` VALUES(5, 11, 4, 1);
+INSERT INTO `game` VALUES(6, 3, 8, 1);
+INSERT INTO `game` VALUES(7, 7, 1, 1);
+INSERT INTO `game` VALUES(8, 7, 3, 1);
+INSERT INTO `game` VALUES(9, 5, 4, 1);
+INSERT INTO `game` VALUES(10, 6, 6, 3);
+INSERT INTO `game` VALUES(11, 7, 0, 1);
+INSERT INTO `game` VALUES(12, 1, 8, 1);
+INSERT INTO `game` VALUES(13, 3, 9, 1);
+INSERT INTO `game` VALUES(14, 2, 3, 1);
+INSERT INTO `game` VALUES(15, 3, 5, 1);
+INSERT INTO `game` VALUES(16, 2, 6, 1);
+INSERT INTO `game` VALUES(17, 4, 3, 1);
+INSERT INTO `game` VALUES(18, 3, 4, 1);
+INSERT INTO `game` VALUES(19, 3, 1, 1);
+INSERT INTO `game` VALUES(20, 12, 3, 1);
+INSERT INTO `game` VALUES(21, 7, 5, 1);
+INSERT INTO `game` VALUES(22, 3, 0, 1);
+INSERT INTO `game` VALUES(23, 10, 3, 1);
+INSERT INTO `game` VALUES(24, 5, 3, 1);
+INSERT INTO `game` VALUES(25, 6, 5, 1);
+INSERT INTO `game` VALUES(26, 8, 5, 1);
+INSERT INTO `game` VALUES(27, 5, 5, 2);
+INSERT INTO `game` VALUES(28, 1, 4, 1);
+INSERT INTO `game` VALUES(29, 9, 1, 1);
+INSERT INTO `game` VALUES(30, 5, 3, 1);
+INSERT INTO `game` VALUES(31, 2, 3, 1);
+INSERT INTO `game` VALUES(32, 5, 1, 1);
+INSERT INTO `game` VALUES(33, 3, 7, 1);
+INSERT INTO `game` VALUES(34, 3, 0, 1);
+INSERT INTO `game` VALUES(35, 12, 2, 1);
+INSERT INTO `game` VALUES(36, 9, 2, 1);
+INSERT INTO `game` VALUES(37, 3, 6, 1);
+INSERT INTO `game` VALUES(38, 8, 2, 1);
+INSERT INTO `game` VALUES(39, 1, 7, 1);
+INSERT INTO `game` VALUES(40, 2, 3, 1);
+INSERT INTO `game` VALUES(41, 7, 7, 3);
+INSERT INTO `game` VALUES(42, 0, 0, 4);
+INSERT INTO `game` VALUES(43, 3, 3, 2);
+INSERT INTO `game` VALUES(44, 4, 7, 1);
+INSERT INTO `game` VALUES(45, 1, 6, 1);
+INSERT INTO `game` VALUES(46, 1, 5, 1);
+INSERT INTO `game` VALUES(47, 7, 4, 1);
+INSERT INTO `game` VALUES(48, 1, 8, 1);
+INSERT INTO `game` VALUES(49, 4, 2, 1);
+INSERT INTO `game` VALUES(50, 5, 4, 1);
+INSERT INTO `game` VALUES(51, 4, 1, 1);
+INSERT INTO `game` VALUES(52, 4, 3, 1);
+INSERT INTO `game` VALUES(53, 1, 4, 1);
+INSERT INTO `game` VALUES(54, 4, 5, 1);
+INSERT INTO `game` VALUES(55, 5, 3, 1);
+INSERT INTO `game` VALUES(56, 2, 2, 2);
+INSERT INTO `game` VALUES(57, 3, 3, 3);
+INSERT INTO `game` VALUES(58, 7, 7, 2);
+INSERT INTO `game` VALUES(59, 4, 5, 1);
+INSERT INTO `game` VALUES(60, 2, 7, 1);
+INSERT INTO `game` VALUES(61, 4, 5, 1);
+INSERT INTO `game` VALUES(62, 7, 3, 1);
+INSERT INTO `game` VALUES(63, 1, 2, 1);
+INSERT INTO `game` VALUES(64, 9, 2, 1);
+INSERT INTO `game` VALUES(65, 13, 4, 1);
+INSERT INTO `game` VALUES(66, 2, 6, 1);
+INSERT INTO `game` VALUES(67, 2, 7, 1);
+INSERT INTO `game` VALUES(68, 2, 4, 1);
+INSERT INTO `game` VALUES(69, 4, 2, 1);
+INSERT INTO `game` VALUES(70, 4, 2, 1);
+INSERT INTO `game` VALUES(71, 7, 2, 1);
+INSERT INTO `game` VALUES(72, 2, 9, 1);
+INSERT INTO `game` VALUES(73, 4, 8, 1);
+INSERT INTO `game` VALUES(74, 1, 0, 1);
+INSERT INTO `game` VALUES(75, 3, 7, 1);
+INSERT INTO `game` VALUES(76, 7, 4, 1);
+INSERT INTO `game` VALUES(77, 3, 6, 1);
+INSERT INTO `game` VALUES(78, 3, 9, 1);
+INSERT INTO `game` VALUES(79, 0, 0, 5);
+INSERT INTO `game` VALUES(80, 4, 8, 1);
+INSERT INTO `game` VALUES(81, 2, 5, 1);
+INSERT INTO `game` VALUES(82, 1, 4, 1);
+INSERT INTO `game` VALUES(83, 10, 6, 1);
+INSERT INTO `game` VALUES(84, 4, 1, 1);
+INSERT INTO `game` VALUES(85, 1, 6, 1);
+INSERT INTO `game` VALUES(86, 6, 7, 1);
+INSERT INTO `game` VALUES(87, 3, 7, 1);
+INSERT INTO `game` VALUES(88, 1, 6, 1);
+INSERT INTO `game` VALUES(89, 1, 0, 1);
+INSERT INTO `game` VALUES(90, 7, 2, 1);
+INSERT INTO `game` VALUES(91, 1, 8, 1);
+INSERT INTO `game` VALUES(92, 0, 0, 6);
+INSERT INTO `game` VALUES(93, 6, 2, 1);
+INSERT INTO `game` VALUES(94, 4, 4, 3);
+INSERT INTO `game` VALUES(95, 1, 3, 1);
+INSERT INTO `game` VALUES(96, 0, 0, 6);
+INSERT INTO `game` VALUES(97, 0, 0, 6);
+INSERT INTO `game` VALUES(98, 0, 0, 6);
+INSERT INTO `game` VALUES(99, 2, 9, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `game_special`
+--
+
+CREATE TABLE `game_special` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `game_special`
+--
+
+INSERT INTO `game_special` VALUES(1, 'none');
+INSERT INTO `game_special` VALUES(2, 'h_sol');
+INSERT INTO `game_special` VALUES(3, 'a_sol');
+INSERT INTO `game_special` VALUES(4, 'h_for');
+INSERT INTO `game_special` VALUES(5, 'a_for');
+INSERT INTO `game_special` VALUES(6, 'na');
 
 -- --------------------------------------------------------
 
